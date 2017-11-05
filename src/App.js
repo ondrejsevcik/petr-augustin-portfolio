@@ -26,6 +26,20 @@ class App extends Component {
             </a>
           </nav>
         </header>
+        <section 
+          className="row hero-banner"
+        >
+          <img 
+            className="hero-banner__img"
+            src="http://petraugustin.com/wp-content/uploads/2017/02/cropped-st3-1.png" 
+          />
+          <div className="hero-banner__titles">
+            <h1 className="hero-banner__title">
+              My name is Petr Augustyn<span className="hero-banner__dot">.</span>
+            </h1>
+            <h2>I design ...</h2>
+          </div>
+        </section>
       </div>
     );
   }

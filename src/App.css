@@ -29,3 +29,25 @@
   margin-left: 1em;
 }
 
+
+/* Hero banner */
+.hero-banner {
+  position: relative;
+  display: block;
+}
+
+.hero-banner__img {
+  max-width: 100%;
+}
+
+.hero-banner__titles {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  color: white;
+}
+
+.hero-banner__dot {
+  color: #ff6b7e;
+}
+
