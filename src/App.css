@@ -33,7 +33,6 @@
 /* Hero banner */
 .hero-banner {
   position: relative;
-  display: block;
 }
 
 .hero-banner__img {
@@ -51,3 +50,12 @@
   color: #ff6b7e;
 }
 
+
+/* Article */
+.article__link {
+  display: block;
+}
+
+.article__image {
+  width: 100%;
+}
