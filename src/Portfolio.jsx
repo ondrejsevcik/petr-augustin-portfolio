@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component} from 'react'
 
 export default class Portfolio extends Component {
   render() {
@@ -26,6 +26,6 @@ export default class Portfolio extends Component {
           </article>
         </main>
       </div>
-    );
+    )
   }
 }

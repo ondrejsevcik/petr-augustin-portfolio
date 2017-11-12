@@ -1,4 +1,5 @@
-import React, {Component} from 'react';
+import React, {Component} from 'react'
+import HeroBanner from './HeroBanner'
 
 export default class Home extends Component {
   render() {
@@ -14,29 +15,18 @@ export default class Home extends Component {
         title: 'Botanica – IoT app for smart gardening',
         url: '/portfolio/botanica/',
       }
-    ];
+    ]
 
     return (
       <div>
         <section
           className="row hero-banner"
         >
-          <div className="col-12 hero-banner__wrapper">
-            <img
-              className="hero-banner__img"
-              src="http://petraugustin.com/wp-content/uploads/2017/02/cropped-st3-1.png"
-            />
-            <div className="hero-banner__titles">
-              <h1 className="hero-banner__title">
-                My name is Petr Augustin<span className="hero-banner__dot">.</span>
-              </h1>
-              <h2>I design ...</h2>
-            </div>
-          </div>
+          <HeroBanner />
         </section>
         <main className="row">
           {articles.map(a =>
-            <article className="col-6">
+            <article key={a.url} className="col-6">
               <a href={a.url} className="article__link">
                 <img
                   className="article__image"
@@ -48,6 +38,6 @@ export default class Home extends Component {
           )}
         </main>
       </div>
-    );
+    )
   }
 }

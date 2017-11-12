@@ -3,9 +3,12 @@ import ReactDOM from 'react-dom'
 import './index.css'
 import registerServiceWorker from './registerServiceWorker'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+// include fetch polifyll
+import 'whatwg-fetch'
 import './App.css';
 import Home from './Home'
 import Portfolio from './Portfolio'
+import CaseStudies from './CaseStudies'
 
 
 let App = () => (
@@ -28,7 +31,7 @@ let App = () => (
           <a href="/contact" className="nav__link">
             Let's talk
           </a>
-          <a href="/published-on-medium" className="nav__link">
+          <a href="/case-studies" className="nav__link">
             Published on Medium
           </a>
         </nav>
@@ -36,6 +39,7 @@ let App = () => (
 
       <Route exact path="/" component={Home} />
       <Route path="/portfolio/:slug" component={Portfolio} />
+      <Route path="/case-studies" component={CaseStudies} />
 
     </div>
   </Router>
