@@ -15,7 +15,7 @@ let App = () => (
       <header className="row align-items-center">
         <div className="col-6 justify-content-start">
           <h1 className="header__title">
-            <a href="/">Petr Augustyn</a>
+            <a href="/">Petr Augustin</a>
           </h1>
           <h2 className="header__subtitle">
             UX, Product and Interaction designer

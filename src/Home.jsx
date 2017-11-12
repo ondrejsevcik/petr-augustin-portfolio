@@ -28,7 +28,7 @@ export default class Home extends Component {
             />
             <div className="hero-banner__titles">
               <h1 className="hero-banner__title">
-                My name is Petr Augustyn<span className="hero-banner__dot">.</span>
+                My name is Petr Augustin<span className="hero-banner__dot">.</span>
               </h1>
               <h2>I design ...</h2>
             </div>
