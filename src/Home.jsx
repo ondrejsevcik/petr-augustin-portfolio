@@ -36,6 +36,7 @@ export default class Home extends Component {
               <img
                 className="article__image"
                 src={a.image}
+                alt={a.title}
               />
               <h1 className="article__title">
                 {a.title}

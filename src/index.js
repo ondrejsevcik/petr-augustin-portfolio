@@ -18,7 +18,7 @@ let navigationLinks = [
 
 let App = () => (
   <Router>
-    <div className="container-fluid">
+    <div className="container">
       <header className="row align-items-center">
         <div className="col-6">
           <h1 className="header__title">
@@ -31,6 +31,7 @@ let App = () => (
         <nav className="nav col-6">
           {navigationLinks.map(item =>
             <NavLink
+              key={item.path}
               to={item.path}
               className="nav__link"
               activeClassName="nav__link--active"
