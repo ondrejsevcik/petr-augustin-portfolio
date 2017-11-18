@@ -110,18 +110,18 @@ body {
 
 /* Article */
 .article {
-  position: relative;
-}
-
-.article__image {
-  width: 100%;
+  background-size: cover;
+  min-height: 300px;
+  color: white;
+  display: flex;
+  align-items: flex-end;
+  padding: 1rem;
+  text-decoration: none;
 }
 
 .article__title {
-  color: white;
-  position: absolute;
-  left: 1em;
-  bottom: 0;
+  font-size: 1.3em;
+  text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
 }
 
 /* Portfolio */

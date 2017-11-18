@@ -4,6 +4,8 @@ export default class Portfolio extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      // Slug comes from React-router
+      slug: props.match.params.slug,
       item: {
         elements: {
           title: { value: '' },
@@ -15,7 +17,7 @@ export default class Portfolio extends Component {
   }
 
   componentDidMount() {
-    let url = 'https://deliver.kenticocloud.com/393dbc5f-df9c-4c02-aabc-f5a733cffdcc/items?system.type=portfolio_item';
+    let url = 'https://deliver.kenticocloud.com/393dbc5f-df9c-4c02-aabc-f5a733cffdcc/items?system.codename=' + this.state.slug;
 
     fetch(url)
       .then(response => response.json())

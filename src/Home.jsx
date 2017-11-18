@@ -3,25 +3,29 @@ import HeroBanner from './HeroBanner'
 import { Link } from 'react-router-dom';
 
 export default class Home extends Component {
-  render() {
+  constructor(props) {
+    super(props);
+    this.state = {
+      items: [],
+    }
+  }
 
-    let articles = [
-      {
-        image: 'http://petraugustin.com/wp-content/uploads/2017/10/final5.png',
-        title: 'Weather & fuel aircraft app',
-        url: '/portfolio/weather',
-      },
-      {
-        image: 'http://petraugustin.com/wp-content/uploads/2017/09/hero-image-botanica.png',
-        title: 'Botanica – IoT app for smart gardening',
-        url: '/portfolio/botanica/',
-      },
-      {
-        image: 'http://petraugustin.com/wp-content/uploads/2017/09/hero-image-botanica.png',
-        title: 'Dummy article with some text in it',
-        url: '/portfolio/botanica2/',
-      },
-    ]
+  componentDidMount() {
+    let url = 'https://deliver.kenticocloud.com/393dbc5f-df9c-4c02-aabc-f5a733cffdcc/items?system.type=portfolio_item&elements=title,headline_image';
+
+    fetch(url)
+      .then(response => response.json())
+      .then(json => {
+        this.setState({ items: json.items });
+      })
+  }
+
+  render() {
+    let articles = this.state.items.map(item => ({
+      title: item.elements.title.value,
+      headlineImage: item.elements.headline_image.value[0].url,
+      url: 'portfolio/' + item.system.codename,
+    }));
 
     return (
       <div>
@@ -32,16 +36,22 @@ export default class Home extends Component {
         </section>
         <main className="row">
           {articles.map(a =>
-            <Link to={a.url} className="article animated fadeInUp col-xs-12 col-md-6" key={a.url}>
-              <img
-                className="article__image"
-                src={a.image}
-                alt={a.title}
-              />
-              <h1 className="article__title">
-                {a.title}
-              </h1>
-            </Link>
+            <div
+              key={a.url}
+              className="col-xs-12 col-md-6"
+            >
+              <Link
+                to={a.url}
+                className="article"
+                style={{
+                  backgroundImage: `url(${a.headlineImage})`,
+                }}
+              >
+                <h1 className="article__title">
+                  {a.title}
+                </h1>
+              </Link>
+            </div>
           )}
         </main>
       </div>

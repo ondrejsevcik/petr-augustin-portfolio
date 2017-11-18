@@ -22,7 +22,9 @@ let App = () => (
       <header className="row align-items-center">
         <div className="col-6">
           <h1 className="header__title">
-            <Link to="/" className="header__link">Petr Augustin</Link>
+            <Link to="/" className="header__link">
+              Petr Augustin
+            </Link>
           </h1>
           <h2 className="header__subtitle">
             UX, Product and Interaction designer
