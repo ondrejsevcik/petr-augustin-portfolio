@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import HeroBanner from './HeroBanner'
+import { Link } from 'react-router-dom';
 
 export default class Home extends Component {
   render() {
@@ -14,7 +15,12 @@ export default class Home extends Component {
         image: 'http://petraugustin.com/wp-content/uploads/2017/09/hero-image-botanica.png',
         title: 'Botanica – IoT app for smart gardening',
         url: '/portfolio/botanica/',
-      }
+      },
+      {
+        image: 'http://petraugustin.com/wp-content/uploads/2017/09/hero-image-botanica.png',
+        title: 'Dummy article with some text in it',
+        url: '/portfolio/botanica2/',
+      },
     ]
 
     return (
@@ -26,15 +32,15 @@ export default class Home extends Component {
         </section>
         <main className="row">
           {articles.map(a =>
-            <article key={a.url} className="col-6">
-              <a href={a.url} className="article__link">
-                <img
-                  className="article__image"
-                  src={a.image}
-                />
-                <h1>{a.title}</h1>
-              </a>
-            </article>
+            <Link to={a.url} className="article animated fadeInUp col-xs-12 col-md-6" key={a.url}>
+              <img
+                className="article__image"
+                src={a.image}
+              />
+              <h1 className="article__title">
+                {a.title}
+              </h1>
+            </Link>
           )}
         </main>
       </div>

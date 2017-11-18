@@ -1,9 +1,13 @@
 @import url('styles/bootstrap-grid.css');
 
-
 /* Header */
 .header__title {
-  font-size: 1.3em;
+  margin: 0.2em 0;
+}
+
+.header__link {
+  color: black;
+  text-decoration: none;
 }
 
 .header__subtitle {
@@ -11,8 +15,11 @@
   color: #9624e2;
 }
 
-
 /* Navigation */
+.nav {
+  text-align: right;
+}
+
 .nav__link {
   color: #4a4a4a;
   text-decoration: none;
@@ -28,7 +35,6 @@
 .nav__link + .nav__link {
   margin-left: 1em;
 }
-
 
 /* Hero banner */
 .hero-banner {
@@ -46,16 +52,55 @@
   color: white;
 }
 
+.hero-banner__title,
+.hero-banner__subtitle {
+  font-size: 3vmax;
+}
+
 .hero-banner__dot {
   color: #ff6b7e;
 }
 
+.hero-banner__typed-text {
+  color: #37c9df;
+  font-style: italic;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 200;
+}
+
+.typed-cursor {
+  color: #37c9df;
+  font-style: italic;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 200;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
 /* Article */
-.article__link {
-  display: block;
+.article {
+  position: relative;
 }
 
 .article__image {
   width: 100%;
 }
+
+.article__title {
+  color: white;
+  position: absolute;
+  left: 1em;
+  bottom: 0;
+}
+

@@ -16,7 +16,7 @@ export default class HeroBanner extends React.Component {
       ],
       typeSpeed: 50,
       backSpeed: 50,
-      loopCount: Infinity,
+      loop: true,
     };
 
     // this.el refers to the <span> in the render() method
