@@ -8,10 +8,10 @@ export default class CaseStudies extends Component {
         items: [],
       },
     }
-  }
+  }	
 
   componentDidMount() {
-    let url = 'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@petraugustin';
+    let url = 'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/petr-augustin';
     fetch(url ,{
       headers: {
         'Content-Type': 'application/json'

@@ -34,7 +34,7 @@ export default class HeroBanner extends React.Component {
       <div className="col-12 hero-banner__wrapper">
         <img
           className="hero-banner__img"
-          src="http://petraugustin.com/wp-content/uploads/2017/02/cropped-st3-1.png"
+          src="https://assets.kenticocloud.com/393dbc5f-df9c-4c02-aabc-f5a733cffdcc/662c9d53-c77e-48d5-a997-7b4109333f97/Portfolio-header2.png"
         />
         <div className="hero-banner__titles">
           <h1 className="h1 hero-banner__title">
@@ -47,7 +47,7 @@ export default class HeroBanner extends React.Component {
               ref={(el) => { this.el = el; }}
             />
           </h2>
-        </div>
+				</div>
       </div>
     )
   }

@@ -11,9 +11,9 @@ import Portfolio from './Portfolio'
 import CaseStudies from './CaseStudies'
 
 let navigationLinks = [
-  { title: 'My design', path: '/my-design'},
-  { title: "Let's talk", path: '/contact'},
-  { title: "Published on Medium", path: '/case-studies'},
+  { title: 'Designs', path: '/'},
+  { title: "Bio", path: '/contact'},
+  { title: "Articles", path: '/case-studies'},
 ]
 
 let App = () => (
