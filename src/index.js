@@ -9,6 +9,7 @@ import './App.css';
 import Home from './Home'
 import Portfolio from './Portfolio'
 import CaseStudies from './CaseStudies'
+import Contact from './Contact'
 
 let navigationLinks = [
   { title: 'Designs', path: '/'},
@@ -19,34 +20,38 @@ let navigationLinks = [
 let App = () => (
   <Router>
     <div className="container">
-      <header className="row align-items-center">
-        <div className="col-6">
-          <h1 className="header__title">
-            <Link to="/" className="header__link">
-              Petr Augustin
-            </Link>
-          </h1>
-          <h2 className="header__subtitle">
-            UX, Product and Interaction designer
-          </h2>
-        </div>
-        <nav className="nav col-6">
-          {navigationLinks.map(item =>
-            <NavLink
-              key={item.path}
-              to={item.path}
-              className="nav__link"
-              activeClassName="nav__link--active"
-            >
-              {item.title}
-            </NavLink>
-          )}
-        </nav>
-      </header>
+			<div className="nav__sticky">
+				<header className="row align-items-center">
+
+			    <div className="col-6">
+	          <h1 className="header__title">
+	            <Link to="/" className="header__link">
+	              Petr Augustin
+	            </Link>
+	          </h1>
+	          <h2 className="header__subtitle">
+	            UX, Product and Interaction designer
+	          </h2>
+        	</div>
+							<nav className="nav col-6">
+			          {navigationLinks.map(item =>
+			            <NavLink
+			              key={item.path}
+			              to={item.path}
+			              className="nav__link"
+			              activeClassName="nav__link--active"
+			            >
+			              {item.title}
+			            </NavLink>
+			          )}
+			        </nav>
+      	</header>
+			</div>
 
       <Route exact path="/" component={Home} />
       <Route path="/portfolio/:slug" component={Portfolio} />
       <Route path="/case-studies" component={CaseStudies} />
+	      <Route path="/contact" component={Contact} />
     </div>
   </Router>
 )
