@@ -44,10 +44,12 @@ export default class HeroBanner extends React.Component {
             <span className="h2">I design </span>
             <span
               className="hero-banner__typed-text"
-              ref={(el) => { this.el = el; }}
+              ref={(el) => {
+                this.el = el;
+              }}
             />
           </h2>
-				</div>
+        </div>
       </div>
     )
   }
