@@ -81,6 +81,7 @@ export default class Home extends Component {
         photoDescription: aboutMeItem.elements.photo.value[0].description,
         paragraph: aboutMeItem.elements.paragraph.value,
         subtitle: aboutMeItem.elements.subtitle.value,
+        medium: aboutMeItem.elements.medium.value[0].url,
       };
     }
 
@@ -90,19 +91,23 @@ export default class Home extends Component {
       socialSection = {
         title: socialSectionItem.elements.title.value,
         paragraph: socialSectionItem.elements.paragraph.value,
+        imageUrl: socialSectionItem.elements.social.value[0].url,
+        socialDesc: socialSectionItem.elements.social.value[0].description,
       };
     }
 
     return (
+
       <div>
         <section
-          className="row hero-banner"
+          className="hero-banner"
         >
           <HeroBanner/>
         </section>
 
+				<div class="case-studies-wrapper">
         <h2 id="#case-studies">
-          My favourite case studies
+          My case studies
         </h2>
         <main className="row">
           {articles.map(a =>
@@ -125,42 +130,74 @@ export default class Home extends Component {
           )}
         </main>
 
-        <h2 id="experience">{cvSection.title}</h2>
-        <p>{cvSection.paragraph}</p>
-        {cvParts.map(cvPart =>
-          <div className="row">
-            <div className="col-md-5">
-              {cvPart.year} - {cvPart.job}
-            </div>
-            <div className="col-md-7">
-              {cvPart.description}
-            </div>
-          </div>
-        )}
+					<div class="page-spacer">
+					<a href="" class="page-link">Want to see more? I worked on all kinds of projects...</a>
+					</div>
 
-        <h2 id="about-me">{aboutMe.title}</h2>
-        <div className="row">
-          <div className="col-md-4">
-            <img className="img-fluid" src={aboutMe.photoUrl} alt={aboutMe.photoDescription}/>
-          </div>
-          <div className="col-md-8" dangerouslySetInnerHTML={{__html: aboutMe.paragraph}}>
-          </div>
-        </div>
+				</div>
+				<div className="cvSection-wrapper">
+	        <h2 id="experience">{cvSection.title}</h2>
+	        <div className="lead">{cvSection.paragraph}</div>
+	        {cvParts.map(cvPart =>
+	          <div className="row cv-paragraph">
+              <div className="col-sm-2-md-1">
+                <img className="cv-icon" src={cvPart.icon} alt={aboutMe.photoDescription}/>
+              </div>
+              <div className="col-md-3">
+	              <div class="cv-year">{cvPart.year}</div>
+                <div class="cv-job">{cvPart.job} </div>
+                <div class="cv-title">{cvPart.title} </div>
+	            </div>
+	            <div className="col-md-6 cv-info">
+	              {cvPart.description}
+	            </div>
+	          </div>
+	        )}
+                <div class="page-spacer">
+                <a href="https://www.linkedin.com/in/petr-augustin/" class="page-link-blue" target="_blank">Not enough details? It’s all on my LinkedIn profile…</a>
+                </div>
+				</div>
 
-        <h3>{aboutMe.subtitle}</h3>
-        <div className="row">
-          {/* TODO add medium articles here */}
-        </div>
-        <a href="https://medium.com/@petraugustin" target="_blank" rel="noopener noreferrer">
-          And you love to read? Here's all my Medium stories...
-        </a>
+				<div className="about-me-wrapper">
+	        <h2 id="about-me">{aboutMe.title}</h2>
+	        <div className="row">
+	          <div className="photo col-md-4">
+	            <img className="img-fluid" src={aboutMe.photoUrl} alt={aboutMe.photoDescription}/>
+	          </div>
+	          <div className="lead col-md-7" dangerouslySetInnerHTML={{__html: aboutMe.paragraph}}>
+	          </div>
+	        </div>
 
-        <h2 id="social">{socialSection.title}</h2>
-        <div className="row">
-          <p
-            className="col-md-8 social-section__paragraph"
-            dangerouslySetInnerHTML={{__html: socialSection.paragraph}}>
-          </p>
+	        <h3>{aboutMe.subtitle}</h3>
+	        <div className="row">
+	          {/* TODO add medium articles here */}
+	        </div>
+          <img className="medium" src={aboutMe.medium}/>
+
+	        <a href="https://medium.com/@petraugustin" class="page-link" target="_blank" rel="noopener noreferrer">
+          <br/>
+	          Interested in design? Here's all my Medium stories...
+	        </a>
+
+	        <h2 id="social">{socialSection.title}</h2>
+	        <div className="row">
+	          <div
+	            className="col-md-8 lead"
+	            dangerouslySetInnerHTML={{__html: socialSection.paragraph}}>
+	          </div>
+
+	        </div>
+          <div>
+
+          <a href={socialSection.socialDesc} target="_blank">
+          <img className="social-icon" src={socialSection.imageUrl}/>
+          </a>
+
+
+          </div>
+				</div>
+        <div className="footer">
+          Made with love (and sweat!) using <a href="http://kenticocloud.com" class="page-link-footer" target="_blank">Kentico Cloud platform</a> as a headless CMS by myself and my mate <a href="https://github.com/ondrejsevcik" class="page-link-footer" target="_blank">https://github.com/ondrejsevcik </a>
         </div>
       </div>
     )

@@ -23,7 +23,7 @@ html {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
-	margin-top: 80px;
+	margin-top: 0px;
   margin-right: auto;
   margin-left: auto;
 	margin-bottom: 180px;
@@ -55,8 +55,8 @@ html {
 
 .container-fluid {
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  /* padding-right: 15px;
+  padding-left: 15px; */
   margin-right: auto;
   margin-left: auto;
 }

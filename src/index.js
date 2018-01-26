@@ -17,7 +17,7 @@ let navigationLinks = [
 
 let App = () => (
   <Router>
-    <div className="container">
+    <div className="container-fluid">
       <div className="nav__sticky">
         <header className="row align-items-center">
 
@@ -27,9 +27,9 @@ let App = () => (
                 Petr Augustin
               </Link>
             </h1>
-            <h2 className="header__subtitle">
+            <p className="header__subtitle">
               UX, Product and Interaction designer
-            </h2>
+            </p>
           </div>
           <nav className="nav col-6">
             {navigationLinks.map(item =>
