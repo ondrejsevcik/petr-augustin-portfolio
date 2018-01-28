@@ -82,6 +82,7 @@ export default class Home extends Component {
         paragraph: aboutMeItem.elements.paragraph.value,
         subtitle: aboutMeItem.elements.subtitle.value,
         medium: aboutMeItem.elements.medium.value[0].url,
+        mediumLink: aboutMeItem.elements.medium.value[0].description,
       };
     }
 
@@ -140,10 +141,10 @@ export default class Home extends Component {
 	        <div className="lead">{cvSection.paragraph}</div>
 	        {cvParts.map(cvPart =>
 	          <div className="row cv-paragraph">
-              <div className="col-sm-2-md-1">
+              <div className="col-3 col-md-1">
                 <img className="cv-icon" src={cvPart.icon} alt={aboutMe.photoDescription}/>
               </div>
-              <div className="col-md-3">
+              <div className="col-9 col-md-3">
 	              <div class="cv-year">{cvPart.year}</div>
                 <div class="cv-job">{cvPart.job} </div>
                 <div class="cv-title">{cvPart.title} </div>
@@ -172,8 +173,9 @@ export default class Home extends Component {
 	        <div className="row">
 	          {/* TODO add medium articles here */}
 	        </div>
+            <a href={aboutMe.mediumLink} target="_blank">
           <img className="medium" src={aboutMe.medium}/>
-
+            </a>
 	        <a href="https://medium.com/@petraugustin" class="page-link" target="_blank" rel="noopener noreferrer">
           <br/>
 	          Interested in design? Here's all my Medium stories...
@@ -182,7 +184,7 @@ export default class Home extends Component {
 	        <h2 id="social">{socialSection.title}</h2>
 	        <div className="row">
 	          <div
-	            className="col-md-8 lead"
+	            className="lead col-md-8"
 	            dangerouslySetInnerHTML={{__html: socialSection.paragraph}}>
 	          </div>
 
@@ -198,6 +200,7 @@ export default class Home extends Component {
 				</div>
         <div className="footer">
           Made with love (and sweat!) using <a href="http://kenticocloud.com" class="page-link-footer" target="_blank">Kentico Cloud platform</a> as a headless CMS by myself and my mate <a href="https://github.com/ondrejsevcik" class="page-link-footer" target="_blank">https://github.com/ondrejsevcik </a>
+        <br/> <img src="favicon.ico" className="footer-icon"/>
         </div>
       </div>
     )

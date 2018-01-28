@@ -35,15 +35,12 @@ export default class Portfolio extends Component {
 
     return (
       <div>
-        <div
-          className="col-12 portfolio__title"
-          style={{
-            backgroundImage: `url(${item.headlineImage})`,
-          }}
-        >
-          <h1>{item.title}</h1>
+        <div className="col-12 portfolio__title" style={{backgroundImage: `url(${item.headlineImage})`,}}>
+          <div className="hero-banner__overlay">
+              <h1>{item.title}</h1>
+          </div>
         </div>
-        <main className="row">
+        <main className="portfolio-main">
           <article className="portfolio__content col-12" dangerouslySetInnerHTML={{ __html: item.htmlContent}}>
           </article>
         </main>
