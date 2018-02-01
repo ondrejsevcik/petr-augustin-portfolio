@@ -182,7 +182,7 @@ export default class Home extends Component {
 
 
           <img className="medium" src="medium-article-3.png"/>
-        
+
 	        <a href="https://medium.com/@petraugustin" class="page-link" target="_blank" rel="noopener noreferrer">
           <br/>
 	          Interested in design? Here's all my Medium stories...
@@ -205,7 +205,7 @@ export default class Home extends Component {
           <a href="https://www.behance.net/petr-augustin-UX" target="_blank">
           <img src="behance-icon.png" className="social-icon"/></a>
           <a href="https://medium.com/@petraugustin" target="_blank">
-          <img src="Medium-icon.png" className="social-icon"/></a>
+          <img src="medium-icon.png" className="social-icon"/></a>
           <a href="https://twitter.com/petraugustin" target="_blank">
           <img src="twitter-icon.png" className="social-icon"/></a>
 
