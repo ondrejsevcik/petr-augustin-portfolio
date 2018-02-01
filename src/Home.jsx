@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import HeroBanner from './HeroBanner'
 import { Link } from 'react-router-dom';
+var scrollToElement = require('scroll-to-element');
+
 
 export default class Home extends Component {
   constructor(props) {
@@ -140,16 +142,14 @@ export default class Home extends Component {
 	        <h2 id="experience">{cvSection.title}</h2>
 	        <div className="lead">{cvSection.paragraph}</div>
 	        {cvParts.map(cvPart =>
-	          <div className="row cv-paragraph">
-              <div className="col-3 col-md-1">
-                <img className="cv-icon" src={cvPart.icon} alt={aboutMe.photoDescription}/>
-              </div>
-              <div className="col-9 col-md-3">
+	          <div className="cv-paragraph">
+              <img className="cv-icon" src={cvPart.icon} alt={aboutMe.photoDescription}/>
+              <div className="cv-details">
 	              <div class="cv-year">{cvPart.year}</div>
                 <div class="cv-job">{cvPart.job} </div>
                 <div class="cv-title">{cvPart.title} </div>
 	            </div>
-	            <div className="col-md-6 cv-info">
+	            <div className="cv-info">
 	              {cvPart.description}
 	            </div>
 	          </div>
@@ -173,9 +173,16 @@ export default class Home extends Component {
 	        <div className="row">
 	          {/* TODO add medium articles here */}
 	        </div>
-            <a href={aboutMe.mediumLink} target="_blank">
-          <img className="medium" src={aboutMe.medium}/>
+            <a href="https://uxdesign.cc/5-ux-books-thatll-change-how-you-think-about-design-4925a0d51de7" target="_blank">
+          <img className="medium" src="medium-article-1.png"/>
             </a>
+            <a href="https://uxplanet.org/how-to-master-ui-prototyping-and-spend-less-time-working-84cceb6e5800" target="_blank">
+          <img className="medium" src="medium-article-2.png"/>
+            </a>
+
+
+          <img className="medium" src="medium-article-3.png"/>
+        
 	        <a href="https://medium.com/@petraugustin" class="page-link" target="_blank" rel="noopener noreferrer">
           <br/>
 	          Interested in design? Here's all my Medium stories...
@@ -191,9 +198,16 @@ export default class Home extends Component {
 	        </div>
           <div>
 
-          <a href={socialSection.socialDesc} target="_blank">
-          <img className="social-icon" src={socialSection.imageUrl}/>
-          </a>
+          <a href="http://www.linkedin.com/in/petr-augustin" target="_blank">
+					<img src="linkedin-icon.png" className="social-icon"/></a>
+          <a href="https://dribbble.com/petr-augustin-UX" target="_blank">
+					<img src="dribbble-icon.png" className="social-icon"/></a>
+          <a href="https://www.behance.net/petr-augustin-UX" target="_blank">
+          <img src="behance-icon.png" className="social-icon"/></a>
+          <a href="https://medium.com/@petraugustin" target="_blank">
+          <img src="Medium-icon.png" className="social-icon"/></a>
+          <a href="https://twitter.com/petraugustin" target="_blank">
+          <img src="twitter-icon.png" className="social-icon"/></a>
 
 
           </div>

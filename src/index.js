@@ -8,6 +8,8 @@ import 'whatwg-fetch'
 import './App.css';
 import Home from './Home'
 import Portfolio from './Portfolio'
+import scrollToElement from 'scroll-to-element'
+
 
 let navigationLinks = [
   {title: 'Case studies', path: '#case-studies'},
@@ -19,19 +21,23 @@ let App = () => (
   <Router>
     <div className="container-fluid">
       <div className="nav__sticky" sm-hidden>
-        <header className="row align-items-center">
+        <header className="align-items-center">
 
-          <div className="col-6">
-            <h1 className="header__title">
+
+          <div className="header__wrapper">
+            <div className="header__title">
               <Link to="/" className="header__link">
                 Petr Augustin
               </Link>
-            </h1>
-            <p className="header__subtitle">
+            </div>
+            <div className="header__subtitle">
               UX, Product and Interaction designer
-            </p>
+            </div>
           </div>
-          <nav className="nav col-6  ">
+
+
+
+          <nav className="nav">
             {navigationLinks.map(item =>
               <NavLink
                 key={item.path}
