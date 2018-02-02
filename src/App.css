@@ -399,7 +399,7 @@ body {
 	width: 100%;
 	height: 100%;
   position: absolute;
-  margin-left: -15px;
+  /* margin-left: -15px; */
 }
 
 .portfolio__title {
