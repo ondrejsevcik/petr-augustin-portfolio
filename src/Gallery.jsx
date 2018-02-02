@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import HeroBanner from './HeroBanner'
 import { Link } from 'react-router-dom';
+var scrollToElement = require('scroll-to-element');
 
 
 export default class Home extends Component {
@@ -101,11 +102,7 @@ export default class Home extends Component {
     return (
 
       <div>
-        <section
-          className="hero-banner"
-        >
-          <HeroBanner/>
-        </section>
+        
 
 				<div class="case-studies-wrapper">
         <h2 id="#case-studies">

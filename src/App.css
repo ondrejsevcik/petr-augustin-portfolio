@@ -111,6 +111,10 @@ body {
 	background-color: rgba(255, 255, 255, 0.2);
 	width: 100%;
 	height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* position: absolute; */
 }
 
 .hero-banner__img {
@@ -119,16 +123,19 @@ body {
 	background-image:url('https://assets.kenticocloud.com/393dbc5f-df9c-4c02-aabc-f5a733cffdcc/372484b2-02f6-40a1-b156-90f58d3f474e/Hero-image.png');
 	background-position: center;
 	background-size: cover;
-	position: relative;
+	/* position: relative; */
 	width: 100%;
   margin-left: 0px;
   margin-right: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
 }
 
 .hero-banner__titles {
   position: absolute;
-  top: 15%;
+  top: 10%;
   left: 9%;
 	padding-right: 20px;
   color: white;
@@ -141,18 +148,23 @@ body {
 	border-radius: 100%;
 	bottom: 8%;
 	left: 45%;
-	position: absolute;
+	/* position: absolute; */
 	width: 100px;
 	height: 100px;
 	text-align: center;
 	padding: 20px;
 	color: #fff;
+  margin-top: 23.5rem;
+	background-color: rgba(255, 255, 255, 0.25);
 
 }
 
 .hero-banner__title {
-    padding-top: 2vw;
-    font-size: 8vw;
+    font-size: 7.5vw;
+}
+
+.hero-banner__subtitle {
+  font-size: 7.5vw;
 }
 
 @media (min-width:650px) {
@@ -160,11 +172,12 @@ body {
       padding-top: 3vw;
       font-size: 4vw;
   }
+  .hero-banner__subtitle {
+    font-size: 4vw;
+  }
 }
 
-.hero-banner__subtitle {
-  font-size: 4vmax;
-}
+
 
 .hero-banner__dot {
   color: #ff6b7e;
@@ -229,18 +242,28 @@ body {
 
 /* Article */
 .article {
-  background-size: cover;
-  min-height: 230px;
+  background-size: auto 110%;
+  background-position: 50% 50%;
+  min-height: 205px;
   color: white;
   display: flex;
-  align-items: flex-start;
-  padding-top: 6rem;
-	padding-left: 2rem;
+  align-items: flex-end;
+  padding-bottom: 1rem;
+	padding-left: 1rem;
   margin-top: 1rem;
   border-radius: 1rem;
   text-decoration: none;
 	box-shadow: 0 5px 14px 0 rgba(106, 106, 106, 0.31);
+  transition:all .2s ease-in-out;
+  max-width: 360px;
 }
+
+.article:hover {
+  /* background-position: 50% top; */
+  background-size: auto 130%;
+  /* padding-bottom: 2rem; */
+}
+
 
 .article__title {
   font-size: 1.3em;
@@ -366,13 +389,20 @@ body {
 }
 
 /* Portfolio */
+
+
+.portfolio__overlay {
+	background-color: rgba(255, 255, 255, 0.2);
+	width: 100%;
+	height: 100%;
+  position: absolute;
+  margin-left: -15px;
+}
+
 .portfolio__title {
   min-height: 200px;
   background-size: cover;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   background-position: 50% 68%;
   color: white;
   background-color: rgba(255, 255, 255, 0.2);
@@ -381,19 +411,22 @@ body {
 .portfolio__title h1 {
   color: white;
   text-shadow: 1px 4px 8px rgba(0, 0, 0, 1);
-  font-size: 2.8rem;
+  font-size: 2rem;
 }
 
 @media (min-width: 660px) {
   .portfolio__content p {
     max-width: 660px;
   }
+  .portfolio__title h1 {
+    font-size: 3rem;
+  }
 }
 
 .portfolio__content {
   line-height: 1.6;
 	padding: 0 9%;
-  padding-bottom: 8rem;
+  padding-bottom: 2rem;
 }
 
 .portfolio__content h1,

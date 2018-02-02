@@ -9,6 +9,7 @@ import './App.css';
 import Home from './Home'
 import Portfolio from './Portfolio'
 import scrollToElement from 'scroll-to-element'
+import Gallery from './Gallery'
 
 
 let navigationLinks = [
