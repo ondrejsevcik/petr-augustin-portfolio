@@ -38,7 +38,7 @@ export default class Portfolio extends Component {
       <div>
 
         <div className="col-12 portfolio__title" style={{backgroundImage: `url(${item.headlineImage})`,}}>
-        <div className="">
+        <div className="portfolio__center">
             <h1>{item.title}</h1>
           </div><div className="portfolio__overlay">
 
@@ -47,7 +47,7 @@ export default class Portfolio extends Component {
         <main className="portfolio-main">
           <article className="portfolio__content col-12" dangerouslySetInnerHTML={{ __html: item.htmlContent}}>
           </article>
-          <div className="po portfolio__content col-12">
+          <div className="portfolio__content col-12">
           <Link to="/" className="page-link">
             Back to all case-studies
           </Link>
