@@ -133,7 +133,7 @@ export default class Home extends Component {
         </main>
 
 					<div class="page-spacer">
-					<a href="" class="page-link">Want to see more? I worked on all kinds of projects...</a>
+					<a href="" class="page-link">A design nut? See all my projects here...</a>
 					</div>
 
 				</div>
@@ -154,7 +154,7 @@ export default class Home extends Component {
 	          </div>
 	        )}
                 <div class="page-spacer">
-                <a href="https://www.linkedin.com/in/petr-augustin/" class="page-link-blue" target="_blank">Not enough details? It’s all on my LinkedIn profile…</a>
+                <a href="https://www.linkedin.com/in/petr-augustin/" class="page-link-blue" target="_blank">Want details? Find all on my LinkedIn…</a>
                 </div>
 				</div>
 
@@ -184,7 +184,7 @@ export default class Home extends Component {
 
 	        <a href="https://medium.com/@petraugustin" class="page-link" target="_blank" rel="noopener noreferrer">
           <br/>
-	          Interested in design? Here's all my Medium stories...
+	          Interested in design? Read all my articles...
 	        </a>
 
 	        <h2 id="social">{socialSection.title}</h2>
