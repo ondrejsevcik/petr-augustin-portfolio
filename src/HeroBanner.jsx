@@ -51,8 +51,8 @@ export default class HeroBanner extends React.Component {
 							</div>
             <div className="hero-banner__scroll">
 							<div className="derp">
-									Check it out <br />
-									<img src="https://assets.kenticocloud.com/393dbc5f-df9c-4c02-aabc-f5a733cffdcc/dd948e5d-c4e0-4eb6-bac3-75c12872c5ff/arrow-down.svg"/>
+
+									<img src="https://assets.kenticocloud.com/393dbc5f-df9c-4c02-aabc-f5a733cffdcc/dd948e5d-c4e0-4eb6-bac3-75c12872c5ff/arrow-down.svg" className="scroll-button"/>
 							</div>
             </div>
 	        </div>

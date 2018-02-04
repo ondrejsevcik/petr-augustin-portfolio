@@ -153,13 +153,13 @@ export default class Home extends Component {
 	            </div>
 	          </div>
 	        )}
-                <div class="page-spacer">
+                <div class="page-spacer-wide">
                 <a href="https://www.linkedin.com/in/petr-augustin/" class="page-link-blue" target="_blank">Want details? Find all on my LinkedIn…</a>
                 </div>
 				</div>
 
 				<div className="about-me-wrapper">
-	        <h2 id="about-me">{aboutMe.title}</h2>
+	        <h2 className="underheader" id="about-me">{aboutMe.title}</h2>
 	        <div className="row">
 	          <div className="photo col-md-4">
 	            <img className="img-fluid" src={aboutMe.photoUrl} alt={aboutMe.photoDescription}/>
@@ -187,7 +187,7 @@ export default class Home extends Component {
 	          Interested in design? Read all my articles...
 	        </a>
 
-	        <h2 id="social">{socialSection.title}</h2>
+	        <h2 id="social" className="underheader">{socialSection.title}</h2>
 	        <div className="row">
 	          <div
 	            className="lead col-md-8"
