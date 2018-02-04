@@ -133,7 +133,7 @@ export default class Home extends Component {
         </main>
 
 					<div class="page-spacer">
-					<a href="" class="page-link">A design nut? See all my projects here...</a>
+
 					</div>
 
 				</div>
