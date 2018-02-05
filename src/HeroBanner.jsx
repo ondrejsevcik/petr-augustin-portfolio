@@ -51,7 +51,7 @@ export default class HeroBanner extends React.Component {
 			          </h3>
                 <div class="quick-links"><a href="https://www.linkedin.com/in/petr-augustin/" target="_blank">LinkedIn</a>  <a href="https://medium.com/@petraugustin" target="_blank">Medium</a>  <a href="https://twitter.com/PetrAugustin" target="_blank">Twitter</a></div>
 							</div>
-            <a href="#" onClick={() => scrollToElement("#case-studies", {offset: -50})}>
+            <a href="#" onClick={() => scrollToElement("#case-studies", {offset: -80})}>
             <div className="hero-banner__scroll">
 							<div className="derp">
 
