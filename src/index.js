@@ -43,6 +43,7 @@ let App = () => (
               <NavLink
                 key={item.path}
                 to={item.path}
+								onClick={() => scrollToElement(item.path, {offset: -50})}
                 className="nav__link"
                 activeClassName="nav__link--active"
               >

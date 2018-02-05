@@ -107,8 +107,8 @@ export default class Home extends Component {
           <HeroBanner/>
         </section>
 
-				<div class="case-studies-wrapper">
-        <h2 id="#case-studies">
+				<div class="case-studies-wrapper" id="case-studies">
+        <h2>
           My case studies
         </h2>
         <main className="row">

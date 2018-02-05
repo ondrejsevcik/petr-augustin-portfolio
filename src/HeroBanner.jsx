@@ -1,5 +1,7 @@
 import React from 'react'
 import Typed from 'typed.js'
+import scrollToElement from 'scroll-to-element'
+
 
 export default class HeroBanner extends React.Component {
   componentDidMount() {
@@ -49,12 +51,14 @@ export default class HeroBanner extends React.Component {
 			          </h3>
                 <div class="quick-links"><a href="https://www.linkedin.com/in/petr-augustin/" target="_blank">LinkedIn</a>  <a href="https://medium.com/@petraugustin" target="_blank">Medium</a>  <a href="https://twitter.com/PetrAugustin" target="_blank">Twitter</a></div>
 							</div>
+            <a href="#" onClick={() => scrollToElement("#case-studies", {offset: -50})}>
             <div className="hero-banner__scroll">
 							<div className="derp">
 
 									<img src="https://assets.kenticocloud.com/393dbc5f-df9c-4c02-aabc-f5a733cffdcc/dd948e5d-c4e0-4eb6-bac3-75c12872c5ff/arrow-down.svg" className="scroll-button"/>
 							</div>
             </div>
+            </a>
 	        </div>
 				</div>
 
